@@ -1,2 +1,4 @@
 # json-api-rookie
-JSON:API 
+
+* Risorse: 
+  * [jsonapi](https://jsonapi.org/)
