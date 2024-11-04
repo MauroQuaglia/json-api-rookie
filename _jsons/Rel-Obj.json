@@ -1,0 +1,7 @@
+{
+  "relationships": {
+    "links": "Links-Obj",
+    "data": "[R-Id-Obj]",
+    "meta": "Meta-Obj"
+  }
+}

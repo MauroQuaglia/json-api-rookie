@@ -1,0 +1,8 @@
+{
+  "data": "[Res-Obj|Res-Id-Obj]", // Dati principali del documento.
+  "errors": "[Err-Obj]",
+  "meta": "Meta-Obj",
+  "jsonapi": "Jsonapi-Obj",
+  "links": "Links-Obj", // Relazionato con i (data) principali.
+  "included": "[Res-Obj]" // Relazionati ai R-Obj principali (data) o ad altri (included).
+}

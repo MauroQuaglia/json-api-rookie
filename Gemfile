@@ -1,3 +1,5 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'active_model_serializers'
+gem "rails"
+gem "sprockets-rails"
+gem "webrick"

@@ -1,0 +1,19 @@
+// Devo mappare lo schema dei modelli.
+// Può essere un oggetto o un array di oggetti.
+{
+  "data": {
+    "id": "1",
+    "type": "articles",
+    "attributes" // Detto anche field: {
+      "title": "Torri Gemelle",
+       // Non può avere ne "type" ne "id" perché sono quelli già definiti sopra
+       // NON mettiamo qui gli id delle risorse correlate, MA nelle relationships.
+    },
+    "relationships" // Detto anche field :  {
+       // Non può avere ne "type" ne "id" perché sono quelli già definiti sopra
+       "Rel-Obj"
+    },
+    "links": "Links-Obj",
+    "meta": "Meta-Obj"
+    }
+}

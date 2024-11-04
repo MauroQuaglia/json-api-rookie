@@ -1,0 +1,8 @@
+// Può essere anche un array
+// Posso mettere anche le varie informazioni negli included.
+{
+  "data": {
+    "type": "articles",
+    "id": "1"
+  }
+}
