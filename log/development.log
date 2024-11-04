@@ -23,3 +23,24 @@ Started GET "/favicon.ico" for ::1 at 2024-11-04 17:13:04 +0100
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+Started GET "/up" for ::1 at 2024-11-04 17:17:32 +0100
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | GC: 0.0ms)
+
+
+Started GET "/up" for ::1 at 2024-11-04 17:24:26 +0100
+Processing by Rails::HealthController#show as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 3.3ms | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2024-11-04 17:24:29 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/xpuser/.rvm/gems/ruby-3.1.1@trustedprogram_service/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/xpuser/.rvm/gems/ruby-3.1.1@trustedprogram_service/gems/railties-7.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.8ms | GC: 0.4ms)
+
+
