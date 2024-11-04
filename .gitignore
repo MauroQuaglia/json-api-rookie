@@ -1,2 +1,4 @@
 /.idea
 /config/master.key
+/tmp
+/log
