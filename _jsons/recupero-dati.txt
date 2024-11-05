@@ -1,0 +1,45 @@
+* Recupero delle risorse principali (data)
+GET /articles
+GET /articles/1
+GET /articles/1/author
+
+Risposta: Rel-Obj
+
+--------------------------------------------
+
+* Recupero delle relazioni (relationships)
+GET /articles/1/relationships/comments
+GET /articles/1/relationships/author
+
+Risposta: Rel-Id-Obj
+
+------------------------------------------
+
+* Inclusione di risorse correlate: include
+GET /articles/1?include=comments
+GET /articles/1?include=comments.author
+
+* Risposta: "included":
+
+-----------------------------------------------
+
+* Campi: fields
+fields[articles]=title,body
+
+---------------------------------------
+
+* Ordinamento: sort
+sort=age (ASC)
+sort=age (ASC),-name (DESC)
+
+-------------------------------------------------
+
+* Paginazione: page
+* Devono finire nell'oggetto "links": first, last, prev, next.
+* Devono rimanere coerenti con le regole di ordinamento
+page[number], page[size]
+
+-----------------------------------------------
+
+* Filtraggio: filter
+filter[author.status]=active

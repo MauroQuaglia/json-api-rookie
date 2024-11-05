@@ -1,0 +1,14 @@
+// Le richieste a relationships devono tornare solo dei Res-Id-Obj.
+GET /articles/1/relationships/comments
+{
+  "data": {
+    "type": "people","id": "12"
+  }
+}
+Oppure:
+{
+"data": [
+    { "type": "people", "id": "2" },
+    { "type": "people", "id": "3" }
+  ]
+}

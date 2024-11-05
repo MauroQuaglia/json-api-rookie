@@ -1,0 +1,20 @@
+// gli included ci devono essere solo se richiesto dal client
+
+GET /articles/1?include=comments
+
+GET /articles/1?include=comments.author
+
+GET /articles/1?include=comments.author,ratings
+
+
+DATA:
+article 1
+
+RELATIONSHIPS:
+comments IDS
+ratings IDS
+
+INCLUDED:
+comments + REL authors
+authors
+ratings
