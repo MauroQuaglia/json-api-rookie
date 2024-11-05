@@ -1,6 +1,4 @@
 source "https://rubygems.org"
 
-gem "sinatra"
-gem "rackup"
-gem "webrick"
+gem "rails", "7.2.2"
 gem "gem-wrappers"
