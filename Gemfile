@@ -1,4 +1,7 @@
 source "https://rubygems.org"
 
-gem "rails", "7.2.2"
+gem "rails"
 gem "gem-wrappers"
+gem "sprockets-rails"
+gem "pg"
+gem "puma"
