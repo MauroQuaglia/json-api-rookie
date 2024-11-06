@@ -1,0 +1,33 @@
+URL di una collezione:
+/photos
+il type deve essere photos
+
+
+---------
+
+URL di un singolo elemento
+/photos/1
+
+
+------------
+
+Per le relazioni di sono due versioni:
+relationship URL: La "self" key in a relationship’s links object.
+related resource URL: La "related" key within a relationship’s links object
+/photos/1/relationships/comments
+/photos/1/relationships/photographer
+
+
+/photos/1/comments -> Commenti
+/photos/1/relationships/comments -> Relazioni
+
+/photos/1/photographer -> Fotografo
+/photos/1/relationships/photographer -> Relazione
+
+
+--------------------------------
+
+Filtri
+
+Tutti i commenti collegati al post con id 1 e 2
+GET /comments?filter[post]=1,2

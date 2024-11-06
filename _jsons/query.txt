@@ -1,0 +1,2 @@
+?page[offset]=0&page[limit]=10
+?page[offset]=0&page[limit]=10

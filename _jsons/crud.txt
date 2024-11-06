@@ -1,0 +1,79 @@
+* CREATE
+
+POST /photos
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+
+{
+  "data": {
+    "type": "photos", # Anche se è scontato è da mettere.
+    "id": UUID # Di solito non si mette perché lo decide il server, ma posso specificare un UUID lato cliente
+    "attributes": {
+      "title": "Ember Hamster",
+      "src": "http://example.com/images/productivity.png"
+    },
+    "relationships": { # Non è obbligatorio ma se c'è rappresenta a cosa deve essere collegata la risorsa.
+      "photographer": {
+        "data": { "type": "people", "id": "9" }
+      }
+    }
+  }
+}
+# Se il Server non può o non vuole accettare l'id deve dare 403 - Forbidden.
+
+
+
+* UPDATE
+PATCH /articles/1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+
+{
+  "data": {
+    "type": "articles",
+    "id": "1",
+    "attributes": {
+      "title": "To TDD or Not"
+    }
+  }
+}
+
+* Posso anche aggiornare le relazioni di una risorsa principale
+PATCH /articles/1 HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+
+Sostituzione completa dei tags di un articolo
+{
+  "data": {
+    "type": "articles",
+    "id": "1",
+    "relationships": {
+      "tags": {
+        "data": [
+          { "type": "tags", "id": "2" },
+          { "type": "tags", "id": "3" }
+        ]
+      }
+    }
+  }
+}
+Oppure
+PATCH /articles/1/relationships/tags HTTP/1.1
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+
+{
+  "data": [
+    { "type": "tags", "id": "2" },
+    { "type": "tags", "id": "3" }
+  ]
+}
+OCCHIO che la
+POST aggiunge POST /articles/1/relationships/tags HTTP/1.1
+PATCH cambia  PATCH /articles/1/relationships/tags HTTP/1.1
+
+
+* DELETE
+DELETE /photos/1 HTTP/1.1
+Accept: application/vnd.api+json
