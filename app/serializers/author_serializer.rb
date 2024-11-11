@@ -1,3 +1,3 @@
 class AuthorSerializer < ActiveModel::Serializer
-  attributes(:surname, :age)
+  attributes(:id, :name, :surname, :age)
 end

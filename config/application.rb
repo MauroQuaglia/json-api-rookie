@@ -12,5 +12,11 @@ module JsonApiRookie
   class Application < Rails::Application
     config.load_defaults(Rails::VERSION::STRING.to_f)
     config.generators.system_tests = nil
+
+    paths = [
+      Rails.root.join('lib')
+    ]
+    config.autoload_paths += paths
+    config.eager_load_paths += paths
   end
 end
