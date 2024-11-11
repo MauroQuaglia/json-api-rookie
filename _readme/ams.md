@@ -13,7 +13,10 @@ Dobbiamo usare il  JsonApi Adapter che è conforme alla specifica 1.0 delle JSON
 * app/models/author.rb
 * __Deve__ esporre un attributo __id__ garantito come univoco.
 
+
 # Giro più chiaro
+```
 author = Author.new(1, 'Mauro', 'Quaglia', 45)
 author_serializer = AuthorSerializer.new(author)
 adapter = ActiveModelSerializers::Adapter.create(author_serializer, adapter_options)
+```

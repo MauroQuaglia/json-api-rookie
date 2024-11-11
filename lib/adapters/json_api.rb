@@ -5,6 +5,7 @@ class Adapters::JsonApi
 
   def options
     {
+      content_type: 'application/vnd.api+json',
       adapter: :json_api,
       key_transform: :unaltered,
       include: '**'

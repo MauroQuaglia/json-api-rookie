@@ -1,7 +1,7 @@
 require("rails_helper")
 
 describe 'Adapters' do
-  # Possono essere solo di tre tipi a meno di non specificarne altri custom.
+  # Possono essere solo di quattro tipi a meno di non specificarne altri custom.
   let(:author) { Author.new(1, 'Mauro', 'Quaglia', 45) }
   let(:author_serializer) { AuthorSerializer.new(author) }
 
@@ -21,6 +21,13 @@ describe 'Adapters' do
 
   it 'attributes' do
     adapter_options = { adapter: :attributes }
+    adapter = ActiveModelSerializers::Adapter.create(author_serializer, adapter_options)
+
+    puts adapter.to_json
+  end
+
+  it 'null' do
+    adapter_options = { adapter: :null }
     adapter = ActiveModelSerializers::Adapter.create(author_serializer, adapter_options)
 
     puts adapter.to_json
