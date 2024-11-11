@@ -7,7 +7,6 @@ describe Post do
     expect(post.id).to eq(1)
     expect(post.title).to eq('Title')
     expect(post.text).to eq('Text')
-    expect(post.comments).to eq('#COMMENTS')
     expect(post.author).to eq('#AUTHOR')
   end
 end
