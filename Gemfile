@@ -19,6 +19,6 @@ gem 'active_model_serializers', '0.10.14' # JSON:API 1.0
 # Usare URI.decode_www_form  (bizarre historical artifact that + characters must be treated as spaces)
 
 group(:test) do
-  gem 'rspec'
+  gem('rspec-rails')
   #gem 'rspec-expectations'
 end
