@@ -1,5 +1,6 @@
 /.idea
 /log
 /tmp
+/pdf
 # Ignore master key for decrypting credentials and more.
 /config/master.key
