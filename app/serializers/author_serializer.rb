@@ -1,3 +1,3 @@
-class AuthorSerializer < ActiveModel::Serializer
+class AuthorSerializer < ApplicationSerializer
   attributes(:id, :name, :surname, :age)
 end

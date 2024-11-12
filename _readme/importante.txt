@@ -1,6 +1,0 @@
-Alcuni browser non supportano la PATCH (IE8) si può usare la POST.
-https://jsonapi.org/recommendations/
-
-
-Formato delle date
-https://jsonapi.org/recommendations/

@@ -6,7 +6,6 @@ class Api::V1::PostsController < Api::ApiController
     post2 = Post.new(2, 'Title 2', 'Text 2', author)
     posts = [post1, post2]
 
-    # TODO content-type
     params_options = ::Adapters::JsonApi.new(params).options
     options = { json: posts, adapter: :json_api, status: 200}.merge(params_options)
 
