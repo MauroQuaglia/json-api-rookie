@@ -17,6 +17,15 @@ Dobbiamo usare il  JsonApi Adapter che è conforme alla specifica 1.0 delle JSON
 # Giro più chiaro
 ```
 author = Author.new(1, 'Mauro', 'Quaglia', 45)
-author_serializer = AuthorSerializer.new(author)
+
+# Le opzioni del serializer riguardano cosa viene serializzato.
+# Fields, include, filter, ...
+author_serializer = AuthorSerializer.new(author, serializer_options)
+
+# Le opzioni dell'adapter riguardano il come le cose serializzate devono essere strutturate.
+# case, key-transform, ...
 adapter = ActiveModelSerializers::Adapter.create(author_serializer, adapter_options)
+
+# NB: Alcune opzioni si possono sovrapporre.
+# Però sono a due livelli distinti.
 ```

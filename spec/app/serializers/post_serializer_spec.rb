@@ -1,24 +1,40 @@
 require("rails_helper")
 
 describe PostSerializer do
-  it 'attributes' do
-    author = Author.new(1, 'Mauro', 'Quaglia', 45)
-    post = Post.new(1, 'Title', 'Text', author)
 
-    serialization = ActiveModelSerializers::SerializableResource.new(post, {})
+  context 'Row (AuthorSerializer)' do
+    it 'to_json' do
+      author = Author.new(1, 'Mauro', 'Quaglia', 45)
+      post = Post.new(1, 'Title', 'Text', author)
 
-    puts serialization.to_json
+      post_serializer = PostSerializer.new(post, {})
+
+      puts post_serializer.to_json
+    end
   end
 
-  it 'include all' do
-    author = Author.new(1, 'Mauro', 'Quaglia', 45)
-    post = Post.new(1, 'Title', 'Text', author)
-    options = {
-      include: '**'
-    }
+  context 'Like in a controller (ActiveModelSerializers::SerializableResource)' do
 
-    serialization = ActiveModelSerializers::SerializableResource.new(post, options)
+    it 'attributes' do
+      author = Author.new(1, 'Mauro', 'Quaglia', 45)
+      post = Post.new(1, 'Title', 'Text', author)
 
-    puts serialization.to_json
+      serialization = ActiveModelSerializers::SerializableResource.new(post, {})
+
+      puts serialization.to_json
+    end
+
+    it 'include all' do
+      author = Author.new(1, 'Mauro', 'Quaglia', 45)
+      post = Post.new(1, 'Title', 'Text', author)
+      options = {
+        include: '**', # opzione da serializer
+        key_transform: :camel # opzione da adapter
+      }
+
+      serialization = ActiveModelSerializers::SerializableResource.new(post, options)
+
+      puts serialization.to_json
+    end
   end
 end
