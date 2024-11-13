@@ -10,3 +10,6 @@ ActiveModelSerializers.config.jsonapi_resource_type = :singular
 ActiveModelSerializers.config.jsonapi_namespace_separator = '--'
 ActiveModelSerializers.config.jsonapi_include_toplevel_object = true # Così è più chiato che uso la JSON:API v1.0
 
+Rails.application.routes.default_url_options = {
+  host: 'example.com'
+}

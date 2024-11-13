@@ -1,18 +1,16 @@
 Alcuni browser non supportano la PATCH (IE8) si può usare la POST.
 https://jsonapi.org/recommendations/
 
-
 Formato delle date
 https://jsonapi.org/recommendations/
 
 Definire content-type
 Nella risposta dell'api
 
-Se si vogliono definire resources_url personalizzate.
-Rails.application.routes.default_url_options = {
-    host: 'example.com'
-}
-
+# Capire cosa sono
+instance_options[:context]
+current_user
+scope
 
 # DOVE SONO
-https://github.com/rails-api/active_model_serializers/blob/v0.10.14/docs/general/serializers.md#associations
+https://github.com/rails-api/active_model_serializers/blob/v0.10.14/docs/general/serializers.md#root
