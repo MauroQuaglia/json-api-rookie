@@ -8,7 +8,8 @@ class Adapters::JsonApi
       content_type: 'application/vnd.api+json',
       adapter: :json_api,
       key_transform: :unaltered,
-      include: '**'
+      include: '**', # '' '*',
+      fields: { author: ['age', 'name'] } # Sparse FieldSet. Posso scegliere quali campi mettere nell'include.
     }
   end
 end

@@ -7,10 +7,6 @@ https://jsonapi.org/recommendations/
 Definire content-type
 Nella risposta dell'api
 
-# Capire cosa sono
-instance_options[:context]
-current_user
-scope
 
 # DOVE SONO
 https://github.com/rails-api/active_model_serializers/blob/v0.10.14/docs/general/serializers.md#root

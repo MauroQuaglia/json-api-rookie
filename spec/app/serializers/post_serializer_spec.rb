@@ -1,7 +1,7 @@
 require("rails_helper")
 
 describe PostSerializer do
-
+  # Torna solo json: https://github.com/rails-api/active_model_serializers/blob/v0.10.14/docs/general/adapters.md#adapters
   context 'Row (AuthorSerializer)' do
     it 'to_json' do
       author = Author.new(1, 'Mauro', 'Quaglia', 45)
