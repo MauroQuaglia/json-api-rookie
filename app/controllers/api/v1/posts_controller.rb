@@ -7,8 +7,19 @@ class Api::V1::PostsController < Api::ApiController
     posts = [post1, post2]
 
     params_options = ::Adapters::JsonApi.new(params).options
-    options = { json: posts, adapter: :json_api, status: 200}.merge(params_options)
+    # Passaggio di uno scope al serializzatore (passo un METODO del controller)
+    # E passaggio anche di un context al serializzatore (passo una VARIABILE del controller)
+    options = { json: posts, adapter: :json_api, status: 200,
+                scope: get_value, scope_name: :get_value_name, # Posso anche non mettere lo scope_name e nel serializzatore chiamare semplicemente "scope"
+                context: { var_hello: "Hello World!" }
+    }.merge(params_options)
 
     render(options)
+  end
+
+  private
+
+  def get_value
+    "y"
   end
 end

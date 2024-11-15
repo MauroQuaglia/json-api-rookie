@@ -11,7 +11,7 @@ class PostSerializer < ApplicationSerializer
   # Se voglio posso anche definire qua un altro AuthorSerializer che avra priorità sull'::AuthorSerializer generico quando si serializzano i post.
 
   # Gli attributi possono essere anche condizionali.
-  attributes(:id, :text)
+  attributes(:id, :my_id)
   attribute(:title, key: :titolo)
 
   # association_type(association_name, options, &block)
@@ -27,7 +27,7 @@ class PostSerializer < ApplicationSerializer
   #  # Di default non mette gli include
   # end
 
-
+  # I link in questo caso sono relativi alla singola risorsa che sta serializzando
   link :self do
     href "https://example.com/#{object.id}"
   end
@@ -36,13 +36,27 @@ class PostSerializer < ApplicationSerializer
 
 
   # Deve essere definito tra gli attributes.
-  def text
+  def my_id
     # L'object è il riferimento al modello che si vuole serializzare.
     "The text is #{object.text}"
   end
 
   def inclusion?
     false
+  end
+
+  # SCOPE e CONTEXT
+  attributes(:text, :test_scope)
+
+  def test_scope
+    # Lo scope è quello passato dal controller. scope === get_value_name
+    result = ''
+    if scope == 'x' # scope === get_value_name
+      result += "Scope X - "
+    else
+      result += "Scope NOT X - "
+    end
+    result + instance_options[:context][:var_hello]
   end
 
 end
