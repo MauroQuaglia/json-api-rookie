@@ -33,6 +33,13 @@ class PostSerializerDoped < ApplicationSerializer
   # Basta che sia definito il Rails.application.routes.default_url_options
   link(:post) { api_v1_posts_url }
 
+  attribute(:custom) do
+    {
+      self: "https://example.com/#{object.id}",
+      next: "https://example.com/#{object.id}"
+    }
+  end
+
   # Deve essere definito tra gli attributes.
   def my_id
     # L'object è il riferimento al modello che si vuole serializzare.
