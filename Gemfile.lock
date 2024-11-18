@@ -77,6 +77,9 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
+    apitome (0.3.1)
+      kramdown
+      railties
     base64 (0.2.0)
     benchmark (0.4.0)
     bigdecimal (3.1.8)
@@ -86,7 +89,6 @@ GEM
     concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
-    csv (3.3.0)
     date (3.4.0)
     diff-lcs (1.5.1)
     drb (2.2.1)
@@ -94,10 +96,6 @@ GEM
     gem-wrappers (1.4.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    httparty (0.22.0)
-      csv
-      mini_mime (>= 1.0.0)
-      multi_xml (>= 0.5.2)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
@@ -106,6 +104,8 @@ GEM
       reline (>= 0.4.2)
     json-api-vanilla (1.0.4)
     jsonapi-renderer (0.2.2)
+    kramdown (2.4.0)
+      rexml
     logger (1.6.1)
     loofah (2.23.1)
       crass (~> 1.0.2)
@@ -118,7 +118,7 @@ GEM
     marcel (1.0.4)
     mini_mime (1.1.5)
     minitest (5.25.1)
-    multi_xml (0.6.0)
+    mustache (1.1.1)
     net-imap (0.5.1)
       date
       net-protocol
@@ -142,7 +142,7 @@ GEM
       rack (>= 3.0.0)
     rack-test (2.1.0)
       rack (>= 1.3)
-    rackup (2.2.0)
+    rackup (2.2.1)
       rack (>= 3)
     rails (7.2.2)
       actioncable (= 7.2.2)
@@ -178,6 +178,11 @@ GEM
       psych (>= 4.0.0)
     reline (0.5.11)
       io-console (~> 0.5)
+    rexml (3.3.9)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
     rspec-core (3.13.2)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.3)
@@ -195,6 +200,10 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.1)
+    rspec_api_documentation (6.1.0)
+      activesupport (>= 3.0.0)
+      mustache (~> 1.0, >= 0.99.4)
+      rspec (~> 3.0)
     securerandom (0.3.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -219,13 +228,14 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (= 0.10.14)
+  apitome
   gem-wrappers
-  httparty
-  json-api-vanilla
+  json-api-vanilla (= 1.0.4)
   pg
   puma
-  rails
+  rails (= 7.2.2)
   rspec-rails
+  rspec_api_documentation
   sprockets-rails
 
 BUNDLED WITH

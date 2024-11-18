@@ -1,4 +1,4 @@
-class Post < ActiveModelSerializers::Model
+class Post < SerializablePoro
   attr_reader(:id, :title, :text)
 
   def initialize(id, title, text, author)
