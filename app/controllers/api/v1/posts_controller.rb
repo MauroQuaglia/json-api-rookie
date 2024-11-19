@@ -1,6 +1,10 @@
 class Api::V1::PostsController < Api::ApiController
 
   def index
+    if params[:id].present? && params[:id].to_i <= 0
+      return render(status: 400)
+    end
+
     author = Author.new(1, 'Mauro', 'Quaglia', 45)
     post1 = Post.new(1, 'Title 1', 'Text 1', author)
     post2 = Post.new(2, 'Title 2', 'Text 2', author)

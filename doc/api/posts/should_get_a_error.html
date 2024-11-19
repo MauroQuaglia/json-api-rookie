@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>posts API</title>
+    <title>Posts API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,27 +106,52 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>posts API</h1>
+      <h1>Posts API</h1>
+
+        <p class="explanation">The collection of posts.</p>
 
       <div class="article">
-        <h2>Listing posts</h2>
-        <h3>GET /api/v1/posts</h3>
+        <h2>Should get a error</h2>
+        <h3>GET /api/v1/posts/:id</h3>
 
+          <h3>Parameters</h3>
+          <table class="parameters table table-striped table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="required">
+                    <span class="name">id</span>
+                </td>
+                <td>
+                  <span class="description">Post ID</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
 
           <h3>Request</h3>
 
             <h4>Headers</h4>
-            <pre class="request headers">Host: example.org
+            <pre class="request headers">Accept: application/vnd.api+json
+Content-Type: application/vnd.api+json
+Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /api/v1/posts</pre>
+          <pre class="request route highlight">GET /api/v1/posts/-1</pre>
 
 
 
             <h4>cURL</h4>
-            <pre class="request curl">curl -g &quot;http://localhost:3000/api/v1/posts&quot; -X GET \
+            <pre class="request curl">curl -g &quot;http://localhost:3000/api/v1/posts/-1&quot; -X GET \
+	-H &quot;Accept: application/vnd.api+json&quot; \
+	-H &quot;Content-Type: application/vnd.api+json&quot; \
 	-H &quot;Host: example.org&quot; \
 	-H &quot;Cookie: &quot;</pre>
 
@@ -137,14 +162,14 @@ x-xss-protection: 0
 x-content-type-options: nosniff
 x-permitted-cross-domain-policies: none
 referrer-policy: strict-origin-when-cross-origin
-content-type: application/vnd.api+json; charset=utf-8
-etag: W/&quot;523d74314100245daf5e3def14090bb6&quot;
-cache-control: max-age=0, private, must-revalidate
-x-request-id: f769ac68-976a-4204-a4e1-3add82671f08
-x-runtime: 0.036068
-content-length: 1186</pre>
+content-type: text/plain; charset=utf-8
+vary: Accept
+cache-control: no-cache
+x-request-id: 67716864-df0b-4e80-84ef-0420ca945ae1
+x-runtime: 0.000802
+content-length: 1</pre>
             <h4>Status</h4>
-            <pre class="response status">200 OK</pre>
+            <pre class="response status">400 Bad Request</pre>
               <h4>Body</h4>
               <pre class="response body">[binary data]</pre>
       </div>
