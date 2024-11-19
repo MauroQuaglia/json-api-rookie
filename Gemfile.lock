@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/zipmark/rspec_api_documentation.git
+  revision: d32bf17932a379052e8bb7540fc29ce7e72712ae
+  specs:
+    rspec_api_documentation (6.1.0)
+      activesupport (>= 3.0.0)
+      mustache (~> 1.0, >= 0.99.4)
+      rspec (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -77,9 +86,6 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
-    apitome (0.3.1)
-      kramdown
-      railties
     base64 (0.2.0)
     benchmark (0.4.0)
     bigdecimal (3.1.8)
@@ -104,8 +110,6 @@ GEM
       reline (>= 0.4.2)
     json-api-vanilla (1.0.4)
     jsonapi-renderer (0.2.2)
-    kramdown (2.4.0)
-      rexml
     logger (1.6.1)
     loofah (2.23.1)
       crass (~> 1.0.2)
@@ -137,7 +141,7 @@ GEM
     puma (6.4.3)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.8)
+    rack (3.0.11)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -174,11 +178,10 @@ GEM
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
     rake (13.2.1)
-    rdoc (6.7.0)
+    rdoc (6.8.1)
       psych (>= 4.0.0)
     reline (0.5.11)
       io-console (~> 0.5)
-    rexml (3.3.9)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -200,10 +203,6 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.1)
-    rspec_api_documentation (6.1.0)
-      activesupport (>= 3.0.0)
-      mustache (~> 1.0, >= 0.99.4)
-      rspec (~> 3.0)
     securerandom (0.3.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -228,14 +227,14 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (= 0.10.14)
-  apitome
   gem-wrappers
   json-api-vanilla (= 1.0.4)
   pg
   puma
+  rack (= 3.0.11)
   rails (= 7.2.2)
   rspec-rails
-  rspec_api_documentation
+  rspec_api_documentation!
   sprockets-rails
 
 BUNDLED WITH

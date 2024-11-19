@@ -25,6 +25,12 @@ describe 'json-api-vanilla' do
       docs.links.each do |object, link|
         puts "Type: #{object} - link: #{link}"
       end
+
+      # I link delle relazioni
+      docs.rel_links.each do |object, link|
+        puts "Type: #{object} - rel_link: #{link}"
+      end
+
     end
   end
 end
