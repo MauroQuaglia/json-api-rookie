@@ -1,9 +1,5 @@
 # Risorse
 
-* Specifica [JSON:API](https://jsonapi.org/)
-
-----
-
 * Active Model Serializer (che aderisce alla JSON:API __1.0__) e che rappresenta la parte "server".
  * [pagina principale](https://github.com/rails-api/active_model_serializers)
  * __v0.10.14__
