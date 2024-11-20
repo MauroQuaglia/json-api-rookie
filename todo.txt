@@ -1,3 +1,11 @@
+https://jsonapi.org/format/#query-parameters DONE
+WIP: https://jsonapi.org/format/#fetching-relationships
+
+
+
+
+------------
+
 Alcuni browser non supportano la PATCH (IE8) si può usare la POST.
 https://jsonapi.org/recommendations/
 
