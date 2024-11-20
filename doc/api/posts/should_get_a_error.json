@@ -1,0 +1,52 @@
+{
+  "resource": "Posts",
+  "resource_explanation": "The collection of posts.",
+  "http_method": "GET",
+  "route": "/api/v1/posts/:id",
+  "description": "Should get a error",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Post ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/posts/-1",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 400,
+      "response_status_text": "Bad Request",
+      "response_body": " ",
+      "response_headers": {
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "0",
+        "x-content-type-options": "nosniff",
+        "x-permitted-cross-domain-policies": "none",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-type": "text/plain; charset=utf-8",
+        "vary": "Accept",
+        "cache-control": "no-cache",
+        "x-request-id": "081376b0-88b6-4612-9aec-b4c1618243fc",
+        "x-runtime": "0.000900",
+        "content-length": "1"
+      },
+      "response_content_type": "text/plain; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/api/v1/posts/-1\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

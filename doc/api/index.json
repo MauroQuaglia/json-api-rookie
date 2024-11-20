@@ -1,0 +1,31 @@
+{
+  "resources": [
+    {
+      "name": "Posts",
+      "explanation": "The collection of posts.",
+      "examples": [
+        {
+          "description": "All posts",
+          "link": "posts/all_posts.json",
+          "groups": "all",
+          "route": "/api/v1/posts",
+          "method": "get"
+        },
+        {
+          "description": "Should get a error",
+          "link": "posts/should_get_a_error.json",
+          "groups": "all",
+          "route": "/api/v1/posts/:id",
+          "method": "get"
+        },
+        {
+          "description": "Should get a post",
+          "link": "posts/should_get_a_post.json",
+          "groups": "all",
+          "route": "/api/v1/posts/:id",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

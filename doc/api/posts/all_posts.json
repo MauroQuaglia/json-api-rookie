@@ -1,0 +1,49 @@
+{
+  "resource": "Posts",
+  "resource_explanation": "The collection of posts.",
+  "http_method": "GET",
+  "route": "/api/v1/posts",
+  "description": "All posts",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/posts",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"1\",\n      \"type\": \"post\",\n      \"attributes\": {\n        \"my_id\": \"The text is Text 1\",\n        \"titolo\": \"Title 1\",\n        \"custom\": {\n          \"self\": \"https://example.com/1\",\n          \"next\": \"https://example.com/1\"\n        },\n        \"text\": \"Text 1\",\n        \"test_scope\": \"Scope NOT X - instance_options = Hello World!post - read_attribute_for_serialization: The text is Text 1\"\n      },\n      \"relationships\": {\n        \"author\": {\n          \"data\": {\n            \"id\": \"1\",\n            \"type\": \"author\"\n          }\n        }\n      },\n      \"links\": {\n        \"self\": {\n          \"href\": \"https://example.com/1\"\n        },\n        \"post\": \"http://example.com/api/v1/posts\"\n      },\n      \"meta\": {\n        \"stuff\": \"Homer Simpson\",\n        \"id\": 1\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"type\": \"post\",\n      \"attributes\": {\n        \"my_id\": \"The text is Text 2\",\n        \"titolo\": \"Title 2\",\n        \"custom\": {\n          \"self\": \"https://example.com/2\",\n          \"next\": \"https://example.com/2\"\n        },\n        \"text\": \"Text 2\",\n        \"test_scope\": \"Scope NOT X - instance_options = Hello World!post - read_attribute_for_serialization: The text is Text 2\"\n      },\n      \"relationships\": {\n        \"author\": {\n          \"data\": {\n            \"id\": \"1\",\n            \"type\": \"author\"\n          }\n        }\n      },\n      \"links\": {\n        \"self\": {\n          \"href\": \"https://example.com/2\"\n        },\n        \"post\": \"http://example.com/api/v1/posts\"\n      },\n      \"meta\": {\n        \"stuff\": \"Homer Simpson\",\n        \"id\": 2\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"1\",\n      \"type\": \"author\",\n      \"attributes\": {\n        \"name\": \"Mauro\",\n        \"age\": 45\n      },\n      \"links\": {\n        \"self\": {\n          \"href\": \"https://pippo.com/1\"\n        }\n      }\n    }\n  ],\n  \"jsonapi\": {\n    \"version\": \"1.0\"\n  },\n  \"links\": {\n    \"self\": \"http:/www.google.it\"\n  }\n}",
+      "response_headers": {
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "0",
+        "x-content-type-options": "nosniff",
+        "x-permitted-cross-domain-policies": "none",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "content-type": "application/vnd.api+json; charset=utf-8",
+        "vary": "Accept",
+        "etag": "W/\"523d74314100245daf5e3def14090bb6\"",
+        "cache-control": "max-age=0, private, must-revalidate",
+        "x-request-id": "51a31647-43f2-4b1c-a4e4-63c32db6004a",
+        "x-runtime": "0.036358",
+        "content-length": "1186"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": "curl -g \"http://localhost:3000/api/v1/posts\" -X GET \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

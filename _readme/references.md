@@ -13,8 +13,3 @@
  * __schema__
    * https://github.com/rails-api/active_model_serializers/blob/v0.10.14/docs/jsonapi/schema.md
      * Contine anche una roadmap molto utile.
-----
-
-* RSpec API Doc Generator
-* [rubygems](https://rubygems.org/gems/rspec_api_documentation/versions/6.1.0)
-* [rspec_api_documentation](https://github.com/zipmark/rspec_api_documentation/tree/master)

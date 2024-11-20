@@ -86,6 +86,9 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
+    apitome (0.3.1)
+      kramdown
+      railties
     base64 (0.2.0)
     benchmark (0.4.0)
     bigdecimal (3.1.8)
@@ -110,6 +113,8 @@ GEM
       reline (>= 0.4.2)
     json-api-vanilla (1.0.4)
     jsonapi-renderer (0.2.2)
+    kramdown (2.5.1)
+      rexml (>= 3.3.9)
     logger (1.6.1)
     loofah (2.23.1)
       crass (~> 1.0.2)
@@ -182,6 +187,7 @@ GEM
       psych (>= 4.0.0)
     reline (0.5.11)
       io-console (~> 0.5)
+    rexml (3.3.9)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -227,6 +233,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (= 0.10.14)
+  apitome
   gem-wrappers
   json-api-vanilla (= 1.0.4)
   pg
