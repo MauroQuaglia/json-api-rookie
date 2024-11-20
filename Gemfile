@@ -17,7 +17,9 @@ gem 'json-api-vanilla', '1.0.4' # Per il parsing della risposta
 gem 'active_model_serializers', '0.10.14' # JSON:API 1.0
 
 group(:development) do
-  # Documentaione presa non da RubyGems ma direttamente da GitHub per alcuni fix legati a una issue.
+  # Presa non da RubyGems ma direttamente da GitHub per un fix legato a [binary data].
+  # [binary data] https://github.com/zipmark/rspec_api_documentation/issues/456
+  # Serve quindi questa versione della gemma più il fix in spec/acceptance_helper.rb
   gem 'rspec_api_documentation', git: 'https://github.com/zipmark/rspec_api_documentation.git'
 end
 
@@ -29,3 +31,4 @@ group(:test) do
   #jsonapi_rspec
   #rspec_jsonapi_serializer
 end
+

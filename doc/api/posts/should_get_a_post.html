@@ -166,13 +166,101 @@ content-type: application/vnd.api+json; charset=utf-8
 vary: Accept
 etag: W/&quot;523d74314100245daf5e3def14090bb6&quot;
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 34b76d0e-d1e7-4e54-abc0-9d2dd6473085
-x-runtime: 0.002460
+x-request-id: 78004846-b388-4176-b385-d12e44bbad0a
+x-runtime: 0.002633
 content-length: 1186</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
-              <pre class="response body">[binary data]</pre>
+              <pre class="response body">{
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;1&quot;,
+      &quot;type&quot;: &quot;post&quot;,
+      &quot;attributes&quot;: {
+        &quot;my_id&quot;: &quot;The text is Text 1&quot;,
+        &quot;titolo&quot;: &quot;Title 1&quot;,
+        &quot;custom&quot;: {
+          &quot;self&quot;: &quot;https://example.com/1&quot;,
+          &quot;next&quot;: &quot;https://example.com/1&quot;
+        },
+        &quot;text&quot;: &quot;Text 1&quot;,
+        &quot;test_scope&quot;: &quot;Scope NOT X - instance_options = Hello World!post - read_attribute_for_serialization: The text is Text 1&quot;
+      },
+      &quot;relationships&quot;: {
+        &quot;author&quot;: {
+          &quot;data&quot;: {
+            &quot;id&quot;: &quot;1&quot;,
+            &quot;type&quot;: &quot;author&quot;
+          }
+        }
+      },
+      &quot;links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://example.com/1&quot;
+        },
+        &quot;post&quot;: &quot;http://example.com/api/v1/posts&quot;
+      },
+      &quot;meta&quot;: {
+        &quot;stuff&quot;: &quot;Homer Simpson&quot;,
+        &quot;id&quot;: 1
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2&quot;,
+      &quot;type&quot;: &quot;post&quot;,
+      &quot;attributes&quot;: {
+        &quot;my_id&quot;: &quot;The text is Text 2&quot;,
+        &quot;titolo&quot;: &quot;Title 2&quot;,
+        &quot;custom&quot;: {
+          &quot;self&quot;: &quot;https://example.com/2&quot;,
+          &quot;next&quot;: &quot;https://example.com/2&quot;
+        },
+        &quot;text&quot;: &quot;Text 2&quot;,
+        &quot;test_scope&quot;: &quot;Scope NOT X - instance_options = Hello World!post - read_attribute_for_serialization: The text is Text 2&quot;
+      },
+      &quot;relationships&quot;: {
+        &quot;author&quot;: {
+          &quot;data&quot;: {
+            &quot;id&quot;: &quot;1&quot;,
+            &quot;type&quot;: &quot;author&quot;
+          }
+        }
+      },
+      &quot;links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://example.com/2&quot;
+        },
+        &quot;post&quot;: &quot;http://example.com/api/v1/posts&quot;
+      },
+      &quot;meta&quot;: {
+        &quot;stuff&quot;: &quot;Homer Simpson&quot;,
+        &quot;id&quot;: 2
+      }
+    }
+  ],
+  &quot;included&quot;: [
+    {
+      &quot;id&quot;: &quot;1&quot;,
+      &quot;type&quot;: &quot;author&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;Mauro&quot;,
+        &quot;age&quot;: 45
+      },
+      &quot;links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://pippo.com/1&quot;
+        }
+      }
+    }
+  ],
+  &quot;jsonapi&quot;: {
+    &quot;version&quot;: &quot;1.0&quot;
+  },
+  &quot;links&quot;: {
+    &quot;self&quot;: &quot;http:/www.google.it&quot;
+  }
+}</pre>
       </div>
     </div>
   </body>
