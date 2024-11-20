@@ -42,8 +42,8 @@
         "vary": "Accept",
         "etag": "W/\"523d74314100245daf5e3def14090bb6\"",
         "cache-control": "max-age=0, private, must-revalidate",
-        "x-request-id": "57eb684f-e988-4bcc-96fa-bbeb67f01dd4",
-        "x-runtime": "0.002596",
+        "x-request-id": "3fa93f6c-a902-4386-bb5d-df28eda24e43",
+        "x-runtime": "0.002491",
         "content-length": "1186"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",

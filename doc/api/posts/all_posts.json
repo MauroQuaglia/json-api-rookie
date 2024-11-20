@@ -38,8 +38,8 @@
         "vary": "Accept",
         "etag": "W/\"523d74314100245daf5e3def14090bb6\"",
         "cache-control": "max-age=0, private, must-revalidate",
-        "x-request-id": "51a31647-43f2-4b1c-a4e4-63c32db6004a",
-        "x-runtime": "0.036358",
+        "x-request-id": "607c372f-b098-42c4-9558-423cdfd9db05",
+        "x-runtime": "0.036556",
         "content-length": "1186"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
