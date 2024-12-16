@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get "/posts", to: "posts#index"
-      get "/posts/:id", to: "posts#index"
+      get "/authors", to: "authors#index"
     end
   end
 
